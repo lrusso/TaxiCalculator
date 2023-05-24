@@ -1,0 +1,30 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:background="#FFFFFF">
+	<LinearLayout android:layout_width="fill_parent" android:orientation="vertical" android:layout_height="wrap_content" android:layout_weight="1" android:fillViewport="true">
+		<TextView android:layout_width="fill_parent" android:layout_height="40dp" android:background="@drawable/barra" android:textSize="20sp" android:textColor="#FFFFFF" android:gravity="center|center" android:scaleType="fitXY" android:id="@+id/titulo"/>
+		<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" >
+			<GridView android:layout_width="fill_parent" android:layout_height="fill_parent" android:id="@+id/gridview"/>
+			<TextView android:layout_width="fill_parent" android:layout_height="fill_parent" android:textSize="20sp" android:textColor="#000000" android:gravity="center|center" android:id="@+id/textonada" android:visibility="gone" android:text="@string/textoListaVacia"/>
+		    <Button android:id="@+id/botonagregar"
+		        	android:layout_width="56dp"
+					android:layout_height="56dp"
+        			android:layout_alignParentBottom="true"
+        			android:layout_alignParentRight="true"
+					android:background="@drawable/boton_rounded"
+        			android:layout_marginBottom="15dp"
+        			android:layout_marginRight="15dp"
+        			android:textSize="35sp"
+        			android:text="+"
+    				android:gravity="center"
+            		android:textColor="#FFFFFF"
+					android:onClick="myClickHandler"/>
+		</RelativeLayout>
+	</LinearLayout>
+	<LinearLayout android:layout_width="fill_parent" android:layout_height="40dp" android:background="@drawable/barra" android:layout_alignParentBottom="true">
+		<LinearLayout android:layout_width="fill_parent" android:layout_height="40dp"  android:orientation="vertical">
+	    	<FrameLayout android:layout_width="fill_parent" android:layout_height="40dp">
+	    		<TextView android:layout_width="fill_parent" android:layout_height="40dp" android:textSize="15sp" android:layout_gravity="left|center_vertical" android:gravity="left|center_vertical" android:layout_marginLeft="10dp" android:textColor="#FFFFFF" android:id="@+id/hoy" android:text="@string/textoHoy"/>
+	    		<TextView android:layout_width="fill_parent" android:layout_height="40dp" android:textSize="15sp" android:layout_gravity="right|center_vertical" android:layout_alignParentRight="true" android:gravity="right|center_vertical" android:textColor="#FFFFFF" android:text="@string/textoEnElMes" android:id="@+id/enElMes"/>
+	    	</FrameLayout>
+	    	</LinearLayout>
+	</LinearLayout>
+</LinearLayout>

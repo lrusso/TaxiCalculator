@@ -1,0 +1,10 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ar.com.lrusso.taxicalculator="http://schemas.android.com/apk/res-auto">
+	<item android:id="@+id/agregar" android:title="@string/textoAgregar"/>  
+	<item android:id="@+id/vaciar" android:title="@string/textoVaciar"/>  
+	<item android:id="@+id/graficohoras" android:title="@string/textoGraficoHoras"/>  
+	<item android:id="@+id/graficodias" android:title="@string/textoGraficoDias"/>  
+	<item android:id="@+id/config" android:title="@string/textoConfig"/>  
+	<item android:id="@+id/politica" android:title="@string/textoPolitica"/>  
+	<item android:id="@+id/acercade" android:title="@string/textoAcercaDe"/>  
+</menu>  

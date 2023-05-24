@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Taxi Calculator</string>
+    <string name="action_settings">Options</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="textoAgregar">Add trip</string>
+    <string name="textoVaciar">Wipe month</string>
+    <string name="textoGraficoHoras">Chart by hours</string>
+    <string name="textoGraficoDias">Chart by days</string>
+    <string name="textoConfig">Settings</string>
+    <string name="textoAcercaDe">About...</string>
+	<string name="textAboutMessage"><![CDATA[<h3>APPNAME</h3>Copyright &#169; 2005<br /><br /><b>www.lrusso.com</b><br /><br />by Leonardo Javier Russo.]]></string>
+    <string name="textoAceptar">OK</string>
+    <string name="textoEnElMes">In the month:</string>
+    <string name="textoHoy">Today:</string>
+    <string name="textoCargando">Loading...</string>
+    <string name="textoMesVacio">There must be at least one trip in the current month in order to draw a chart.</string>
+    <string name="textoDisponibleNegativo">The available amount in the current month must not be a negative number in order to draw a chart.</string>
+    <string name="textoAPagarVacio">You must have something to pay in the current month in order to draw a chart.</string>
+    <string name="textoPeriodoMinimo">Minimum period reached.</string>
+    <string name="textoPeriodoMaximo">Maximum period reached.\nTwo years after current year.</string>
+    <string-array name="horas">
+    	<item>00</item>
+    	<item>01</item>
+    	<item>02</item>
+		<item>03</item>
+    	<item>04</item>
+    	<item>05</item>
+    	<item>06</item>
+    	<item>07</item>
+    	<item>08</item>
+    	<item>09</item>
+    	<item>10</item>
+		<item>11</item>
+    	<item>12</item>
+    	<item>13</item>
+    	<item>14</item>
+    	<item>15</item>
+    	<item>16</item>
+    	<item>17</item>
+		<item>18</item>
+    	<item>19</item>
+    	<item>20</item>
+    	<item>21</item>
+    	<item>22</item>
+		<item>23</item>
+	</string-array>
+    <string-array name="minutos">
+    	<item>00</item>
+    	<item>01</item>
+		<item>02</item>
+    	<item>03</item>
+    	<item>04</item>
+    	<item>05</item>
+    	<item>06</item>
+    	<item>07</item>
+    	<item>08</item>
+    	<item>09</item>
+    	<item>10</item>
+    	<item>11</item>
+    	<item>12</item>
+    	<item>13</item>
+    	<item>14</item>
+    	<item>15</item>
+    	<item>16</item>
+    	<item>17</item>
+    	<item>18</item>
+    	<item>19</item>
+    	<item>20</item>
+    	<item>21</item>
+    	<item>22</item>
+    	<item>23</item>
+    	<item>24</item>
+		<item>25</item>
+		<item>26</item>
+    	<item>27</item>
+    	<item>28</item>
+    	<item>29</item>
+    	<item>30</item>
+    	<item>31</item>
+    	<item>32</item>
+    	<item>33</item>
+    	<item>34</item>
+    	<item>35</item>
+    	<item>36</item>
+    	<item>37</item>
+		<item>38</item>
+    	<item>39</item>
+    	<item>40</item>
+    	<item>41</item>
+    	<item>42</item>
+    	<item>43</item>
+    	<item>44</item>
+    	<item>45</item>
+    	<item>46</item>
+    	<item>47</item>
+    	<item>48</item>
+    	<item>49</item>
+    	<item>50</item>
+    	<item>51</item>
+    	<item>52</item>
+    	<item>53</item>
+    	<item>54</item>
+    	<item>55</item>
+		<item>56</item>
+    	<item>57</item>
+    	<item>58</item>
+    	<item>59</item>
+	</string-array>
+    <string-array name="dias">
+    	<item>01</item>
+    	<item>02</item>
+    	<item>03</item>
+    	<item>04</item>
+    	<item>05</item>
+    	<item>06</item>
+    	<item>07</item>
+    	<item>08</item>
+    	<item>09</item>
+    	<item>10</item>
+    	<item>11</item>
+    	<item>12</item>
+    	<item>13</item>
+		<item>14</item>
+    	<item>15</item>
+    	<item>16</item>
+    	<item>17</item>
+    	<item>18</item>
+    	<item>19</item>
+    	<item>20</item>
+    	<item>21</item>
+    	<item>22</item>
+    	<item>23</item>
+    	<item>24</item>
+    	<item>25</item>
+    	<item>26</item>
+		<item>27</item>
+    	<item>28</item>
+    	<item>29</item>
+    	<item>30</item>
+    	<item>31</item>
+    </string-array>
+    <string-array name="meses">
+    	<item>January</item>
+    	<item>February</item>
+    	<item>March</item>
+    	<item>April</item>
+    	<item>May</item>
+    	<item>June</item>
+    	<item>July</item>
+    	<item>August</item>
+    	<item>September</item>
+    	<item>October</item>
+    	<item>November</item>
+    	<item>December</item>
+    </string-array>
+    <string name="textoEnero">January</string>
+    <string name="textoFebrero">February</string>
+    <string name="textoMarzo">March</string>
+    <string name="textoAbril">April</string>
+    <string name="textoMayo">May</string>
+    <string name="textoJunio">June</string>
+    <string name="textoJulio">July</string>
+    <string name="textoAgosto">August</string>
+    <string name="textoSeptiembre">September</string>
+    <string name="textoOctubre">October</string>
+    <string name="textoNoviembre">November</string>
+    <string name="textoDiciembre">December</string>
+
+    <string name="textoLunes">Mon</string>
+    <string name="textoMartes">Tue</string>
+    <string name="textoMiercoles">Wed</string>
+    <string name="textoJueves">Thu</string>
+    <string name="textoViernes">Fri</string>
+    <string name="textoSabado">Sat</string>
+    <string name="textoDomingo">Sun</string>
+    
+    <string name="textoAgregarTitulo">&#160;&#160;&#160;New trip form</string>
+    <string name="textoAgregarMonto">Price:</string>
+    <string name="textoAgregarHoraDelViaje">Trip hour:</string>
+    <string name="textoAgregarHoraTexto">hs.</string>
+    <string name="textoAgregarFechaDelViaje">Trip Date:</string>
+    <string name="textoAgregarObservaciones">Observations (optional):</string>
+    <string name="textoAgregarGuardar">Add trip</string>
+    <string name="textoAgregarTodosLosCampos">You must fill the price field.</string>
+    <string name="textoAgregarPunto">You must input a number.</string>
+    <string name="textoAgregarNumeroPositivo">You must input a number greater than zero.</string>
+    <string name="textoAgregarFecha">The date is not valid.</string>
+    <string name="textoAgregarError">Error</string>
+    <string name="textoNumeroNoValido">The price number is not valid.</string>
+    
+    <string name="textoDeseaEliminar">Do you want to delete the trip&#160;\'</string>
+    <string name="textoSi">Yes</string>
+    <string name="textoNo">No</string>
+    
+    <string name="textoEditarTitulo">&#160;&#160;&#160;Edit trip form</string>
+    <string name="textoEditarActualizar">Update trip</string>
+    
+    <string name="textoViaje">Trip&#160;</string>
+    
+    <string name="textoOpciones">Options</string>
+    <string name="textoAbrir">Open</string>
+    <string name="textoEliminar">Delete</string>
+
+    <string name="textoSeleccioneOpcion">Select option</string>
+    <string name="textoExportarBase">Export database</string>
+    <string name="textoImportarBase">Import database</string>
+    <string name="textoVaciarBase">Wipe database</string>
+    <string name="textoCambiarMoneda">Currency type</string>
+    
+    <string name="textoVaciarMes">Are you sure that you want to wipe the current month?</string>
+    <string name="textoVaciarBasePregunta">Are you sure that you want to wipe the database? You will lose ALL data.</string>
+
+    <string name="textoSeleccioneMoneda">Select currency</string>
+    <string name="textoMonedaDolar">$ - Dollar</string>
+    <string name="textoMonedaEuro">€ - Euro</string>
+    <string name="textoMonedaLibraEsterlina">£ - Pound sterling</string>
+
+    <string name="textoExpoExito">Database exported successfully.</string>
+    <string name="textoExpoFalla">Fail to export database. Check your memory card.</string>
+    <string name="textoExpoFalla2">Cannot export an empty database.</string>
+    <string name="textoImpoExito">Database imported successfully.</string>
+    <string name="textoImpoFalla">Fail to import database. Database not found in memory card.</string>
+
+    <string name="textoImpoPreg">Database will be imported from:\n\n</string>
+    <string name="textoImpoPregSi">Import</string>
+    <string name="textoImpoPregNo">Cancel</string>
+
+	<string name="textoImpoNewMensaje">Select the database.tax file\nfrom your file system.</string>
+	<string name="textoImpoNewAceptar">OK, I\'ll do it</string>
+
+    <string name="textoExpoPregOld">Database will be exported to:\n\n/sdCard/database.tax</string>
+	<string name="textoExpoPregNew">Database will be exported to:\n\n/sdCard/Downloads/database.tax</string>
+    <string name="textoExpoPregSi">Export</string>
+    <string name="textoExpoPregNo">Cancel</string>
+    
+    <string name="textoMensaje">Message</string>
+    <string name="textoError">Error</string>
+
+    <string name="textoListaVacia">Month without trips.\n\n* Swype left or right to change month.\n\n* Press the Menu icon (at the right-top corner) for more options.</string>
+
+    <string name="textoAgregando">Adding...</string>
+    <string name="textoActualizando">Updating...</string>
+    <string name="textoEliminando">Deleting...</string>
+    <string name="textoExportando">Exporting...</string>
+    <string name="textoImportando">Importing...</string>
+    <string name="textoLeyendo">Reading...</string>
+    <string name="textoProcesandoDatos">Processing data, please wait...</string>
+    
+    <string name="textoGraficoGanancias">INCOME</string>
+    <string name="textoGraficoHorasDelDia">HOURS OF THE DAY</string>
+    <string name="textoGraficoDiaDelMes">DAYS OF THE MONTH</string>
+    
+    <string name="textoSugerenciaEliminarMeses">SUGGESTION: Wipe previous months for better performance.</string>
+
+	<string name="textoPreguntaEditarAgregar">The trip has changed.\nSave changes?</string>
+    <string name="textoPreguntaSi">Yes</string>
+    <string name="textoPreguntaNo">No</string>	
+
+    <string name="textoPolitica">Privacy policy</string>
+	<string name="textoPoliticasTexto">Taxi Calculator Privacy Policy\n\nReleased on Dec 21, 2016\n\nI, Leonardo Javier Russo, regard your information significant and release this Privacy Statement to inform you what information I collect and how I use it to personalize and continually improve you experience.\n\nThis Privacy Statement applies to the App "Taxi Calculator" and its services and does not apply to the product or service that which does not link to this statement or has its privacy statement respectively.\n\n1 - Collecting information\n\na. Personal Information.\n\nI do not collect Personal Information. "Personal Information" is information that identifies you or another person, such as your first name and last name, physical addresses, email addresses, telephone, fax, camera, microphone, GPS, or any information stored within your device.\n\nb. Non-personal Information.\n\nI do not collect your non-personal information when you are using the App "Taxi Calculator" or visiting my Website, including your device information, operation system, logs.\n\nc. Information you provide.\n\nI do not collect your information when you communicate with me.\n\nHow I Use Information\n\na. Personal Information.\n\nI do not store Personal Information and therefore I do not disclose your Personal Information.\n\nb. Non-Personal Information.\n\nI do not sell, trade, or otherwise transfer to outside parties your information. I do not combine Non-Personal Information with Personal Information (such as combining your name with your unique User Device number).\n\nContact Me\n\nIf you have any questions or comments about this Policy or our privacy practices, or to report any violations of the Policy or abuse of the App "Taxi Calculator" or the Website, please contact me at contacto@lrusso.com.ar.\n\nChanges\n\nThis Privacy Policy may change which will not reduce your rights under this Privacy Policy from time to time, I will post any privacy policy changes on this page, so please review it periodically. If you do not agree to any modifications to this Policy, your could immediately stop all use of all the Services. Your continued use of the App "Taxi Calculator" following the posting of any modifications to this Policy will constitute your acceptance of the revised Policy.</string>
+</resources>

@@ -1,0 +1,34 @@
+<ScrollView  xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent" android:background="#E8E8E8">
+   	<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:padding="15dp" android:layout_gravity="center_horizontal">  
+	   	<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:background="@drawable/rounded_corners" android:padding="15dp" android:layout_gravity="center_horizontal">  
+
+   		    <TextView android:id="@+id/titulo" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textSize="15sp" android:drawableLeft="@drawable/ic_launcher" android:textColor="#000000" android:gravity="center_vertical" android:text="@string/textoEditarTitulo" android:layout_marginBottom="5dp"/>
+
+			<TextView android:id="@+id/montolabel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingTop="10dp" android:textSize="15sp" android:textColor="#000000" android:text="@string/textoAgregarMonto"/>  
+    		<EditText android:id="@+id/monto" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textSize="15sp" android:singleLine="true" android:lines="1" android:inputType="numberDecimal"/>  
+
+    		<TextView android:id="@+id/horalabel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingTop="15dp" android:textSize="15sp" android:textColor="#000000" android:text="@string/textoAgregarHoraDelViaje"/>
+		
+			<LinearLayout android:layout_width="280dp"  android:layout_height="wrap_content" android:orientation="horizontal" android:weightSum="20">
+				<Spinner  android:id="@+id/horas"       android:layout_weight="5" android:layout_width="0dp" android:layout_height="wrap_content" android:textSize="15sp" android:drawSelectorOnTop="true" android:entries="@array/horas"/>
+				<TextView                               android:layout_weight="1" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:textSize="15sp" android:text=":"/>
+				<Spinner  android:id="@+id/minutos"     android:layout_weight="5" android:layout_width="0dp" android:layout_height="wrap_content" android:textSize="15sp" android:drawSelectorOnTop="true" android:entries="@array/minutos"/>
+				<TextView                               android:layout_weight="10" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:textSize="15sp" android:text="@string/textoAgregarHoraTexto"/>
+			</LinearLayout>
+    		
+    		<TextView android:id="@+id/fechalabel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingTop="15dp" android:textSize="15sp" android:textColor="#000000" android:text="@string/textoAgregarFechaDelViaje"/>
+		
+			<LinearLayout android:layout_width="280dp" android:layout_height="wrap_content" android:orientation="horizontal" android:weightSum="10">
+				<Spinner android:id="@+id/dia" android:layout_weight="2" android:layout_width="0dp" android:layout_height="wrap_content" android:textSize="15sp" android:drawSelectorOnTop="true" android:entries="@array/dias"/>
+				<Spinner android:id="@+id/mes" android:layout_weight="5" android:layout_width="0dp" android:layout_height="wrap_content" android:textSize="15sp" android:drawSelectorOnTop="true" android:entries="@array/meses"/>
+				<Spinner android:id="@+id/ano" android:layout_weight="3" android:layout_width="0dp" android:layout_height="wrap_content" android:textSize="15sp" android:drawSelectorOnTop="true"/>
+			</LinearLayout>
+
+			<TextView android:id="@+id/observacionlabel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingTop="15dp" android:textSize="15sp" android:textColor="#000000" android:text="@string/textoAgregarObservaciones"/>  
+	    	<EditText android:id="@+id/observacion" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textSize="15sp" android:singleLine="true" android:lines="1" android:inputType="text"/>  
+				
+    		<Button android:id="@+id/boton" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textSize="15sp" android:onClick="myClickHandler" android:text="@string/textoEditarActualizar"/>
+    	
+    	</LinearLayout>
+    </LinearLayout>
+</ScrollView>
