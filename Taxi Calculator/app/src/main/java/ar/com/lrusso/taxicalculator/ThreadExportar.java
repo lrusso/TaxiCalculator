@@ -180,10 +180,15 @@ public class ThreadExportar extends AsyncTask<String, Void, Bitmap>
 		try
     		{
 			in = new DataInputStream(actividad.openFileInput(archivo));
-			for (;;)
-        		{
-				resultado = resultado + in.readUTF();
-        		}
+			BufferedReader br = new BufferedReader(new InputStreamReader(in, "utf-8"));
+			StringBuilder sb = new StringBuilder();
+			String line;
+			while(( line = br.readLine()) != null )
+				{
+				sb.append(line);
+				sb.append("\n");
+				}
+			resultado = sb.toString();
     		}
     		catch (Exception e)
     		{

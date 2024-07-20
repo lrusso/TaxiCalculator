@@ -129,10 +129,15 @@ public class ThreadImportarNew extends AsyncTask<String, Void, Bitmap>
         try
             {
             in = new DataInputStream(actividad.openFileInput(archivo));
-            for (;;)
+            BufferedReader br = new BufferedReader(new InputStreamReader(in, "utf-8"));
+            StringBuilder sb = new StringBuilder();
+            String line;
+            while(( line = br.readLine()) != null )
                 {
-                resultado = resultado + in.readUTF();
+                sb.append(line);
+                sb.append("\n");
                 }
+            resultado = sb.toString();
             }
             catch (Exception e)
             {
@@ -153,7 +158,8 @@ public class ThreadImportarNew extends AsyncTask<String, Void, Bitmap>
         try
             {
             DataOutputStream out = new DataOutputStream(actividad.openFileOutput(archivo, Context.MODE_PRIVATE));
-            out.writeUTF(texto);
+            byte[] bytes = texto.getBytes();
+            out.write(bytes);
             out.close();
             }
             catch(Exception e)

@@ -1,7 +1,11 @@
 package ar.com.lrusso.taxicalculator;
 
+import java.io.BufferedReader;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
+import java.io.FileOutputStream;
+import java.io.InputStreamReader;
+import java.io.UTFDataFormatException;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
@@ -71,10 +75,15 @@ public class ThreadAgregar extends AsyncTask<String, Void, Bitmap>
 		try
 			{
 			in = new DataInputStream(actividad.openFileInput(archivo));
-			for (;;)
+			BufferedReader br = new BufferedReader(new InputStreamReader(in, "utf-8"));
+			StringBuilder sb = new StringBuilder();
+			String line;
+			while(( line = br.readLine()) != null )
 				{
-				resultado = resultado + in.readUTF();
+				sb.append(line);
+				sb.append("\n");
 				}
+			resultado = sb.toString();
 			}
 			catch (Exception e)
 			{
@@ -93,8 +102,9 @@ public class ThreadAgregar extends AsyncTask<String, Void, Bitmap>
 		{
 		try
 			{
-			DataOutputStream out = new DataOutputStream(actividad.openFileOutput(archivo, Context.MODE_PRIVATE));
-			out.writeUTF(texto);
+			FileOutputStream out = actividad.openFileOutput(archivo, Context.MODE_PRIVATE);
+			byte[] bytes = texto.getBytes();
+			out.write(bytes);
 			out.close();
 			}
 	    	catch(Exception e)

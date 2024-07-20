@@ -2,6 +2,8 @@ package ar.com.lrusso.taxicalculator;
 
 import java.io.BufferedReader;
 import java.io.DataInputStream;
+import java.io.FileInputStream;
+import java.io.InputStreamReader;
 import java.io.StringReader;
 import java.util.Calendar;
 import java.util.Collections;
@@ -199,12 +201,17 @@ public class ThreadCargarElMes extends AsyncTask<String, Void, Bitmap>
 		String resultado = "";
 		DataInputStream in = null;
 		try
-    		{
-			in = new DataInputStream(GlobalVars.contexto.openFileInput(archivo));
-			for (;;)
-        		{
-				resultado = resultado + in.readUTF();
-        		}
+			{
+			in = new DataInputStream(actividad.openFileInput(archivo));
+			BufferedReader br = new BufferedReader(new InputStreamReader(in, "utf-8"));
+			StringBuilder sb = new StringBuilder();
+			String line;
+			while(( line = br.readLine()) != null )
+				{
+				sb.append(line);
+				sb.append("\n");
+				}
+			resultado = sb.toString();
     		}
     		catch (Exception e)
     		{

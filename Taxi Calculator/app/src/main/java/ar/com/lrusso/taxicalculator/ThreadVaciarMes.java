@@ -3,6 +3,7 @@ package ar.com.lrusso.taxicalculator;
 import java.io.BufferedReader;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
+import java.io.InputStreamReader;
 import java.io.StringReader;
 import java.util.Collections;
 
@@ -169,11 +170,16 @@ public class ThreadVaciarMes extends AsyncTask<String, Void, Bitmap>
 		DataInputStream in = null;
 		try
     		{
-			in = new DataInputStream(GlobalVars.contexto.openFileInput(archivo));
-			for (;;)
-        		{
-				resultado = resultado + in.readUTF();
-        		}
+			in = new DataInputStream(actividad.openFileInput(archivo));
+			BufferedReader br = new BufferedReader(new InputStreamReader(in, "utf-8"));
+			StringBuilder sb = new StringBuilder();
+			String line;
+			while(( line = br.readLine()) != null )
+				{
+				sb.append(line);
+				sb.append("\n");
+				}
+			resultado = sb.toString();
     		}
     		catch (Exception e)
     		{
@@ -193,7 +199,8 @@ public class ThreadVaciarMes extends AsyncTask<String, Void, Bitmap>
 		try
 			{
 			DataOutputStream out = new DataOutputStream(GlobalVars.contexto.openFileOutput(archivo, Context.MODE_PRIVATE));
-			out.writeUTF(texto);
+			byte[] bytes = texto.getBytes();
+			out.write(bytes);
 			out.close();
 			}
 	    	catch(Exception e)

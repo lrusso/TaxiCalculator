@@ -1,7 +1,9 @@
 package ar.com.lrusso.taxicalculator;
 
+import java.io.BufferedReader;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
+import java.io.InputStreamReader;
 import java.util.Calendar;
 
 import android.net.Uri;
@@ -844,15 +846,20 @@ public class Main extends Activity
 		DataInputStream in = null;
 	    try
 	    	{
-		    in = new DataInputStream(openFileInput(archivo));
-	        for (;;)
-	        	{
-	        	resultado = resultado + in.readUTF();
-	        	}
-	    	}
-	    	catch (Exception e)
-	    	{
-	    	}
+			in = new DataInputStream(actividad.openFileInput(archivo));
+			BufferedReader br = new BufferedReader(new InputStreamReader(in, "utf-8"));
+			StringBuilder sb = new StringBuilder();
+			String line;
+			while(( line = br.readLine()) != null )
+				{
+				sb.append(line);
+				sb.append("\n");
+				}
+			resultado = sb.toString();
+			}
+			catch (Exception e)
+			{
+			}
 	    try
 	    	{
 	    	in.close();
@@ -868,7 +875,8 @@ public class Main extends Activity
 		try
 			{
 		    DataOutputStream out = new DataOutputStream(openFileOutput(archivo, Context.MODE_PRIVATE));
-	        out.writeUTF(texto);
+			byte[] bytes = texto.getBytes();
+			out.write(bytes);
 		    out.close();
 			}
 		    catch(Exception e)
