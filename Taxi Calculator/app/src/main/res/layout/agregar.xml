@@ -1,4 +1,4 @@
-<ScrollView  xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent" android:background="#E8E8E8">
+<ScrollView  xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent" android:background="#E8E8E8" android:fitsSystemWindows="true">
    	<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:padding="15dp" android:layout_gravity="center_horizontal">  
 	   	<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:background="@drawable/rounded_corners" android:padding="15dp" android:layout_gravity="center_horizontal">  
 
