@@ -18,7 +18,7 @@ jobs:
         run: |
           echo "$COMPLETE_KEYSTORE_FILE" | base64 -di > "Android/Taxi Calculator/keystore"
       - name: Making Gradlew executable
-        run: chmod +x "./Android/Taxi Calculator/gradlew"
+        run: chmod +x "./Taxi Calculator/gradlew"
       - name: Building the AAB file
         run: cd Android && cd "Taxi Calculator" && ./gradlew clean && ./gradlew bundleRelease
         env:
