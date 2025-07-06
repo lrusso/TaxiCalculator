@@ -29,7 +29,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: app-release-aab
-          path: "Android/Taxi Calculator/app/build/outputs/bundle/release/app-release.aab"
+          path: "Taxi Calculator/app/build/outputs/bundle/release/app-release.aab"
       - name: Building the APK file
         run: cd "Taxi Calculator" && ./gradlew clean && ./gradlew assembleRelease
         env:
@@ -40,7 +40,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: app-release-apk
-          path: "Android/Taxi Calculator/app/build/outputs/apk/release/app-release.apk"
+          path: "Taxi Calculator/app/build/outputs/apk/release/app-release.apk"
 
 # ------------------------------------------------------------------------------------------------------
 #
